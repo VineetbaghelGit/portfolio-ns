@@ -175,6 +175,7 @@ section .title::after {
   color: #fff;
   min-height: 500px;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
   background-color: rgba(0, 0, 0, 0.1);
@@ -641,7 +642,17 @@ footer span a:hover {
     line-height: 38px;
   }
 }
-
+@media (max-width: 390px) {
+  section .title.career::after {
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    font-size: 20px;
+    color: #4285f4;
+    padding: 0 5px;
+    transform: translateX(-50%);
+  }
+}
 .skills .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -652,7 +663,6 @@ footer span a:hover {
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
-
   cursor: pointer;
 }
 .skills .box-container .box img {
